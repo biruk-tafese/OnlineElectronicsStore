@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            padding: 20px;
+            width: 40%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: all .3s ease-in-out;
+        }
+
+        .registration-form input[type="text"]:hover,
+        .registration-form input[type="email"]:hover,
+        .registration-form input[type="password"]:hover {
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, .3) inset;
+        }
+
+        .registration-form input[type="submit"] {
+            display: block;
+            width: 50%;
+            padding: 14px;
+            background-color: #13385e;
+            color: #fff;
+            border: none;
+            margin-top: 17px;
+            margin-left: 25%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .registration-form input[type="submit"]:hover {
+            background-color: #002872;
+        }
+        h2 {
+            padding-top: 500px;
+           background-color: #002872;
+        
+        }
+        small {
+            color: black;
+
+        }
+        span {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <small>zemen<span>Electronics</span></small>
+        <h1>Memebership Registration</h1>
+        <form method="POST" action="register.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+    
+            <input type="submit" value="Register">
+        </form>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    </div>
+</body>
+</html>
