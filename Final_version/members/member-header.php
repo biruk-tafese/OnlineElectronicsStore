@@ -1,6 +1,11 @@
 <?php
-   include "connect.php";
+ include "../connect.php";
+ 
+ // Retrieve the user's name and email from the session if available
+  $name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
+  $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,28 +30,23 @@
         isPopupVisible = !isPopupVisible; // Toggle the visibility state
         
         if (isPopupVisible) {
-          popup.style.display = "block"; // Show the popup
-          overlay.style.display = "block"; // Show the overlay
+          popup.style.display = "none"; // Show the popup
+          overlay.style.display = "none"; // Show the overlay
         } else {
-          popup.style.display = "none"; // Hide the popup
-          overlay.style.display = "none"; // Hide the overlay
+          popup.style.display = "block"; // Hide the popup
+          overlay.style.display = "block"; // Hide the overlay
         }
       }
 
       document.addEventListener("DOMContentLoaded", function() {
-        var popupButton = document.querySelector("button");
+        var popupButton = document.getElementById("overlay"); // Get the account button by its ID
         popupButton.addEventListener("click", togglePopup);
 
         var closeButton = document.querySelector(".popup");
         closeButton.addEventListener("click", togglePopup);
- 
       });
-
-
-
     </script>
     <style> 
-      
       .popup {
         display: none;
         position: fixed;
@@ -59,7 +59,22 @@
         border-radius: 5px;
         z-index: 9999;
       }
-  
+      .user-info {
+       margin-top: 20px;
+     }
+
+   .user-info h3 {
+     font-size: 20px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     margin-left:25px;
+    }
+
+    .user-info p {
+     font-size: 15px;
+     color: #000000;
+     padding-bottom: 20px;
+   }
       .popup-text {
         color: #333;
       }
@@ -101,7 +116,6 @@
 <body>
   <nav>
     <div class="logo">
-       <!-- <img src="img/ZemendElectronics.png" alt="z-logo"> -->
        <h2>Zemen<span>Electronics</span></h2>
     </div>
     <input type="checkbox" id="check">
@@ -110,8 +124,8 @@
     </label>
     <ul>
       <li>
-        <button class="acc" onclick="showPopup()">
-          <i class="fa fa-user" aria-hidden="true" id="account" onmouseover="showTooltip(this, 'Account')" onmouseout="hideTooltip(this)"></i>
+      <button class="acc" id="account" onclick="togglePopup()">
+          <i class="fa fa-user" aria-hidden="true" onmouseover="showTooltip(this, 'Account')" onmouseout="hideTooltip(this)"></i>
         </button>
       </li>
       <li><a href="add-product.php" onclick="uncheckCheckbox()">Add product</a></li>
@@ -123,15 +137,21 @@
   </nav>
   <div id="popup" class="popup">
     <div class="popup-buttons">
-       <p>be a member</p>
-       <button onclick="location.href='../login.php'">
-            <i class="fas fa-sign-in-alt"></i> Login
+     <p>Admin Account</p>
+       <div class="user-info">
+          <h3> Bill Gates</h3>
+          <p> billmela23@gmail.com</p>
+       </div>
+       <button onclick="location.href='../index.php'">
+            <i class="fas fa-sign-out-alt"></i> Logout
           </button>
-        <button onclick="location.href='../register.html'">
-            <i class="fas fa-user-plus"></i> Register
-      </button>
+        <button onclick="location.href='../register.php'">
+            <i class="fas fa-user-minus"></i> Remove account
+        </button>
     </div>
   </div>
+
+  
   <div id="overlay"></div>
 </body>
 </html>

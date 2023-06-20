@@ -114,15 +114,15 @@
           <i class="fa fa-user" aria-hidden="true" id="account" onmouseover="showTooltip(this, 'Account')" onmouseout="hideTooltip(this)"></i>
         </button>
       </li>
-      <li><a href="index.php#footer" onclick="uncheckCheckbox()">Contact</a></li>
-      <li><a href="index.php#footer" onclick="uncheckCheckbox()">About</a></li>
+      <li><a href="products.php#footer" onclick="uncheckCheckbox()">Contact</a></li>
+      <li><a href="products.php#footer" onclick="uncheckCheckbox()">About</a></li>
       <li><a href="products.php" onclick="uncheckCheckbox()">Products</a></li>
       <li><a href="index.php#image-slider" onclick="uncheckCheckbox()">Home</a></li>
     </ul>
   </nav>
   <div id="popup" class="popup">
     <div class="popup-buttons">
-       <p>be a member</p>
+       <p>For Admins only</p>
        <button onclick="location.href='login.php'">
             <i class="fas fa-sign-in-alt"></i> Login
           </button>

@@ -8,14 +8,17 @@ require_once "connect.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../Css/style.css">
+     <link rel="stylesheet" href="Css/style.css">
     <title>Display products</title>
+    
 </head>
 <body>
-    <div class="header">
-    <?php include "header.php"; ?>
-    </div>
+     <header class="header">
+         <!--  header -->
+      <?php include "header.php" ?>
+     </header>
     <?php
+
     try {
         echo '
         </section>
@@ -38,14 +41,16 @@ require_once "connect.php";
             $description = $row['description'];
             // Display the values
             echo '
-            <div class="product">
+           <a href="product-landing.php?name=' . urlencode($name) . '&image=' . urlencode($image) . '&price=' . urlencode($price) . '&description=' . urlencode($description) . '&id=' . urlencode($productId) . '">
+             <div class="product">
                 <figure>
                     <img src="'.$image.'" alt="product-image">
                     <figcaption id="Name"><b>'.$name.'</b></figcaption>
                     <figcaption>'.$price.'</figcaption>
                     <figcaption>'.$description.'</figcaption>
                 </figure>
-            </div>';
+            </div>
+             </a>';
         }
         echo '
         </div>
@@ -58,10 +63,10 @@ require_once "connect.php";
     // Close the connection (optional if we're not using the connection again)
     $conn = null;
     ?>
-    <footer id="footer">
-           <?php
-             include "footer.php";
-           ?>
-        </footer>
+    <div id="footer">
+     <?php
+     include "footer.php";
+    ?>
+    </div>
 </body>
 </html>

@@ -89,14 +89,15 @@ box-shadow: 1px 1px 2px rgba(0,0,0,.3) inset;
         <small>zemen<span>Electronics</span></small>
         <h1>Login</h1>
         <p id="error-message"></p>
-        <form id="login-form" method="POST" action="login.php">
+        <form method="POST" action="members/member-index.php">
+            
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password"  required>
             </div>
             <div>
                 <button type="submit">Log In</button>

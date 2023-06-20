@@ -1,5 +1,5 @@
 <?php
-include "../connect.php";
+include "connect.php";
 
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $image_type = $_FILES['image']['type'];
         
         // Move the uploaded image to a desired location
-        $target_dir = "members/img/";  // Specify the directory where you want to save the images
+        $target_dir = "img/";  // Specify the directory where you want to save the images
         $target_file = $target_dir . basename($image);
         
         // Check if the file is a valid image
-        $allowed_types = array("image/jpeg", "image/png", "image/gpj");
+        $allowed_types = array("image/jpeg", "image/png", "image/jpg");
         
         if (in_array($image_type, $allowed_types)) {
             move_uploaded_file($image_tmp, $target_file);

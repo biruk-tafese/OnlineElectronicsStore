@@ -1,5 +1,7 @@
 <?php
    include "connect.php";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +38,7 @@
              include "products.php";
         ?>
         </main>
+          
          
         <script src="Javascript/main.js"></script>
  </body>

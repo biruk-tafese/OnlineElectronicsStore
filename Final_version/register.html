@@ -3,79 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Admin Registration</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
             font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
-
+        
         .registration-form {
-            background-color: #fff;
+            max-width: 400px;
+            margin: 50px auto;
             padding: 20px;
-            width: 40%;
+            background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            align-items: center;
         }
-
+        
+        .registration-form small {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
         .registration-form h1 {
             text-align: center;
             margin-bottom: 20px;
         }
-
+        
         .registration-form label {
             display: block;
-            margin-bottom: 10px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
-
+        
         .registration-form input[type="text"],
         .registration-form input[type="email"],
-        .registration-form input[type="password"] {
-            width: 90%;
+        .registration-form input[type="password"],
+        .registration-form input[type="file"] {
+            width: 70%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            transition: all .3s ease-in-out;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
-
-        .registration-form input[type="text"]:hover,
-        .registration-form input[type="email"]:hover,
-        .registration-form input[type="password"]:hover {
-            box-shadow: 1px 1px 2px rgba(0, 0, 0, .3) inset;
-        }
-
+        
         .registration-form input[type="submit"] {
             display: block;
             width: 50%;
-            padding: 14px;
-            background-color: #13385e;
+            margin-left: 30%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
             color: #fff;
+            background-color: #4267B2; /* Use a color similar to Facebook's primary color */
             border: none;
-            margin-top: 17px;
-            margin-left: 25%;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
-
-        .registration-form input[type="submit"]:hover {
-            background-color: #002872;
-        }
-        h2 {
-            padding-top: 500px;
-           background-color: #002872;
         
-        }
-        small {
-            color: black;
-
-        }
-        span {
-            color: red;
-            font-style: italic;
+        .registration-form input[type="submit"]:hover {
+            background-color: #3b5998; /* Darken the color on hover */
         }
     </style>
 </head>
@@ -83,19 +73,19 @@
     <div class="registration-form">
         <small>zemen<span>Electronics</span></small>
         <h1>Memebership Registration</h1>
-        <form method="POST" action="register.php">
-            <label for="name">Name:</label>
+        <form method="POST" action="members/member-index.php">
+            <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required><br>
     
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br>
     
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
     
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
-    
+            <input type="password" id="password" name="password" pattern=".{6,}" required><br>
+              
             <input type="submit" value="Register">
         </form>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     </div>

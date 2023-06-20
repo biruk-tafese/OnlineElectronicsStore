@@ -133,7 +133,7 @@
       </div>
       <div class="footer-column">
         <h3>Complaints</h3>
-        <form>
+        <form  action="cstafesebiruk23@gmail.com">
           <div>
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
