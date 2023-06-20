@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+   
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+   .login-form {
+     background-color: #ffffff;
+      padding: 20px;
+      margin:10% 30%;
+      width: 40%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .login-form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   .login-form label {
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+   }
+
+   .login-form input[type="text"],
+   .login-form input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: all .3s ease-in-out;
+    }
+
+
+   .login-form input[type="text"]:hover,
+   .login-form input[type="password"]:hover {
+box-shadow: 1px 1px 2px rgba(0,0,0,.3) inset;
+} 
+
+.login-form button[type="submit"] {
+    display: block;
+    width: 50%;
+    padding: 14px;
+    background-color: #13385e;
+    color: #fff;
+    border: none;
+     margin-top: 17px;
+     margin-left: 20%;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+   .login-form button[type="submit"]:hover {
+    background-color: #002872;
+   }
+  p {
+     font-size: 15px;
+     text-align: center;
+   }
+  p a {
+      text-decoration: none;
+      color: blue;
+  }
+   small {
+      color: black;
+
+  }
+   span {
+     color: red;
+     font-style: italic;
+   }
+
+    </style>
+    <title>Login-zemenElec</title>
+</head>
+<body>
+    <div class="login-form">
+        <small>zemen<span>Electronics</span></small>
+        <h1>Login</h1>
+        <p id="error-message"></p>
+        <form method="POST" action="members/member-index.php">
+            
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"  required>
+            </div>
+            <div>
+                <button type="submit">Log In</button>
+            </div>
+            <p>Do you want to register? <a href="register.html">Register</a></p>
+        </form>
+        <script src="Javascript/login.js"></script>
+    </div>
+</body>
+</html>

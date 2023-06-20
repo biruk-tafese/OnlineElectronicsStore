@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "img",
+			"path": "../img"
+		},
+		{
+			"name": "Final_version",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Final_version",
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -1,0 +1,590 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "montserrat", sans-serif;
+  }
+  
+  .header {
+    margin-top: 0;
+    padding-bottom:90px;
+    margin-bottom:10px;
+}
+  .footer {
+    margin-top: 20px;
+  }
+  /*----------------------For header part styling---------------------------------*/
+  nav {
+    background-color: #13385e;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+  }
+  
+  .logo h2 {
+     color: rgb(197, 197, 197);
+     font-size: 32px;
+     margin-left: 20px;
+     padding-top: 50px;
+     float: left;
+
+    }
+  .logo span {
+    font-style: oblique;
+    color: red;
+    text-shadow: 2px 2px 6px rgba(197, 8, 8, 0.3);
+  }
+  
+  nav ul {
+    margin-right: 40px;
+  }
+  
+  nav ul li {
+    float: right;
+    padding-right: 10px;
+    padding-top: 50px;
+
+  }
+ 
+  nav ul li a {
+    color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding-top: -30px;
+
+  }
+  
+ .acc {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+  a.active,
+  a:hover {
+    background-color: #1b9bff;
+    transition: 0.5s;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #13385e;
+      color: aliceblue;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+    }
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+      z-index: 6;
+    }
+  }
+  
+
+
+  /*---------------------Main body part/products---------------------------------*/
+  .image-slider {
+    min-height: 30em;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/com-1.jpg");
+    transition: 0.3s;
+  }
+  
+  .image-slider * {
+    box-sizing: border-box;
+  }
+  
+  .caption {
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--color-black));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 1em 2em 1em;
+    text-align: center;
+  }
+  
+  .caption h1 {
+    margin: 0;
+    color: var(--color-white);
+  }
+  
+  p {
+    color: var(--color-gray);
+  }
+  
+  .arrow-left,
+  .arrow-right {
+    background: var(--color-white);
+    position: absolute;
+    top: 40%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .arrow-left:hover,
+  .arrow-right:hover {
+    background-color: var(--color-white);
+    color: var(--color-white);
+  }
+  
+  .arrow-left {
+    left: 1em;
+  }
+  
+  .arrow-right {
+    right: 1em;
+  }
+  
+  .image-fade {
+    animation: imgFade 0.5s ease-in-out;
+  }
+  
+  @keyframes imgFade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #products {
+    width: 100%;
+  }
+  
+  #products .container {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0;
+  }
+  
+  #products .container .products-header {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin: 5px;
+  }
+  
+  #products .container .products-header h2 {
+    padding: 2rem 1rem;
+    text-transform: uppercase;
+    font-family: "Franklin Gothic Medium";
+    color: #000000;
+    font-size: 1.875rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-align: center;
+  }
+  
+  #products .container .products-header p {
+    font-family: Cambria;
+    color: rgba(89, 89, 89, 1);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  #products .container .product {
+    width: 25%;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    padding: 1.99rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  #products .container .product:hover {
+    -webkit-transform: scale(0.2);
+    transform: scale(1);
+    opacity: 0.8;
+    -webkit-transition: opacity 800ms ease-in-out 0s;
+    transition: opacity 800ms ease-in-out 0s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0s;
+    transition: -webkit-transform 1s ease-in-out 0s;
+    transition: transform 1s ease-in-out 0s;
+    transition: transform 1s ease-in-out 0s, 
+    -webkit-transform 1s ease-in-out 0s;
+    border: 2px solid #e0e0e0;
+    box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #products .container .product figure img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #products .container .product figure figcaption {
+    font-family: "Franklin Gothic Medium";
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  
+  #products .container .product figure #Name {
+    font-family: "Franklin Gothic Medium", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+    text-transform: uppercase;
+  }
+ 
+  @media only screen and (max-width: 1024px) {
+    #products .container .product {
+      width: 50%;
+      padding: 3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #products .container .product {
+      width: 50%;
+      padding: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    #products .container .product {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive CSS for all devices */
+
+  /*------------mobile device-----------*/
+@media only screen and (max-width: 576px) {
+    .logo {
+      font-size: 25px;
+      padding: 0 50px;
+    }
+    .logo h2 {
+        font-size: 20px;
+      }
+  
+    nav ul {
+      float: none;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      display: block;
+      line-height: 60px;
+      margin: 10px 0;
+    }
+  
+    nav ul li a {
+      padding: 7px 10px;
+      font-size: 14px;
+    }
+  
+    .checkbtn {
+      display: block;
+      margin-right: 40px;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #13385e;
+      color: aliceblue;
+      top: 80px;
+      padding-bottom: 200px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  
+    nav ul li {
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+    }
+  
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      padding:-10px;
+    }
+    
+     #check:checked ~ ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+      }
+
+
+  
+    #check:checked ~ .logo {
+      margin-right: 40px;
+    }
+  
+    #check:checked ~ .logo h2 {
+      margin-top: 10px;
+    }
+  }
+  
+  /* Small devices (landscape phones) */
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    .logo {
+      font-size: 25px;
+      padding: 0 20px;
+    }
+    .logo h2 {
+        font-size: 22px;
+      }
+    nav ul {
+      float: none;
+      margin-right: 0;
+
+    }
+  
+    nav ul li {
+      display: block;
+      line-height: 60px;
+      margin: 10px 0;
+    }
+  
+    nav ul li a {
+      padding: 0 6px;
+      font-size: 14px;
+    }
+  
+    .checkbtn {
+      display: block;
+      margin-right: 40px;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #13385e;
+      color: aliceblue;
+      top: 70px;
+      padding-bottom: 200px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  
+    nav ul li {
+      margin: 20px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+    }
+  
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+      z-index: 6;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    #check:checked ~ ul li {
+        padding: 0;
+    }
+    #check:checked ~ .logo {
+      margin-right: 20px;
+    }
+  
+    #check:checked ~ .logo h2 {
+      margin-top: 10px;
+    }
+  
+    #products .container .product {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .logo {
+      font-size: 25px;
+      padding-right: 30px;
+      margin-left: 4px;
+    }
+  
+    nav ul {
+      float: none;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      display: block;
+      line-height: 60px;
+      margin: 5px 0;
+    }
+  
+    nav ul li a {
+      padding: 5px 6px;
+      font-size: 14px;
+    }
+  
+    .checkbtn {
+      display: block;
+      margin-right: 40px;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #13385e;
+      color: aliceblue;
+      top: 80px;
+      padding-bottom: 200px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  
+    nav ul li {
+      margin: 20px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+    }
+  
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+      z-index: 6;
+      display: flex;
+      flex-direction: column-reverse;
+      padding:-10px;
+
+    }
+    #check:checked ~ ul li {
+        padding:0;
+    }
+    #check:checked ~ .logo {
+      margin-right: 40px;
+    }
+  
+    #check:checked ~ .logo h2 {
+      margin-top: 10px;
+    }
+    
+    #products .container .product {
+      width: 50%;
+      padding: 3rem;
+    }
+  }
+  
+ /*--------for extremely small devices-------*/
+  @media only screen and (max-width: 300px) {
+    .logo h2 {
+      font-size: 10px;
+    }
+  
+    .checkbtn {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+   
+  }
+  
+  
+  
+  
+  
+  
